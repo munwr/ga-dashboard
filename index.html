@@ -7,9 +7,9 @@
 
 <!-- Step 1: Create the containing elements. -->
 
-<section id="auth-button"></section>
-<section id="view-selector"></section>
-<section id="timeline"></section>
+<div id="embed-api-auth-container"></div>
+<div id="chart-container"></div>
+<div id="view-selector-container"></div>
 
 <!-- Step 2: Load the library. -->
 
@@ -32,7 +32,7 @@ gapi.analytics.ready(function() {
    * element with the ID "embed-api-auth-container".
    */
   gapi.analytics.auth.authorize({
-    container: 'auth-button',
+    container: 'embed-api-auth-container',
     clientid: '894866842220-vbrc32rjv8hvcglqagdj6pc1h1t3qq86.apps.googleusercontent.com'
   });
 
@@ -42,7 +42,7 @@ gapi.analytics.ready(function() {
    * element with the id "view-selector-container".
    */
   var viewSelector = new gapi.analytics.ViewSelector({
-    container: 'view-selector'
+    container: 'view-selector-container'
   });
 
   // Render the view selector to the page.
